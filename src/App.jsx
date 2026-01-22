@@ -21,10 +21,11 @@ function App() {
     // Se il campo input è vuoto, non fare nulla
     if (userArticles === '') return;
 
-    // Creo un nuovo oggetto con id e titolo
+    // Creo un nuovo oggetto con id univoco e un titolo
+    // Ogni articolo deve avere avere un id per poterlo gestire (ad es.per rimuoverlo)
     const newArticle = {
-      id: Date.now(), // id univoco
-      titolo: userArticles
+      id: Date.now(), // sarà univoco perchè corrisponde al tempo in cui viene creato in millisecondi 
+      titolo: userArticles // titolo inserito dall'utente tramite l'input
     };
 
     // Array che comprende sia i titoli iniziali che quelli inseriti nel form dall'utente
