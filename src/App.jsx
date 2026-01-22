@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
@@ -60,7 +62,7 @@ function App() {
                 className="ms-2 d-inline"
                 onClick={() =>
                   removeArticle(article.id)}>
-                &#9830;
+                <FontAwesomeIcon icon={faTrash} />
               </div>
             </li>
           ))}
