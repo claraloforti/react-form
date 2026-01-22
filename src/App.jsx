@@ -21,8 +21,14 @@ function App() {
     // Se il campo input è vuoto, non fare nulla
     if (userArticles === '') return;
 
+    // Creo un nuovo oggetto con id e titolo
+    const newArticle = {
+      id: Date.now(), // id univoco
+      titolo: userArticles
+    };
+
     // Array che comprende sia i titoli iniziali che quelli inseriti nel form dall'utente
-    const updateArticles = [...articles, { titolo: userArticles }];
+    const updateArticles = [...articles, newArticle];
 
     // Aggiorno il valore della variabile di stato iniziale con il nuovo array
     setArticles(updateArticles);
